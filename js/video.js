@@ -59,17 +59,18 @@ document.querySelector("#mute").addEventListener("click", function() {
 // Original
 // Remove the oldSchool class from the video.
 document.querySelector("#slider").addEventListener("click", function() {
-	console.log("Show Volume");
+	video.volume=this.value/100;
+	console.log("The volume is"+video.volume);
 	document.querySelector("#volume").innerHTML=this.value + "%"
 	});
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	console.log("Change to oldSchool'");
-	document.querySelector("body").classList.add("oldSchool");
+	video.classList.add("oldSchool");
 	});
 
 document.querySelector("#orig").addEventListener("click", function() {
 	console.log("Change to original");
-	document.querySelector("body").classList.remove("oldSchool");
+	video.classList.remove("oldSchool");
 	});
 	
